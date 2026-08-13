@@ -406,7 +406,7 @@ pages['about.html'] = head(
     "About Us – RA Flooring",
     "Learn about RA Contractor Flooring Inc. — our vision, mission and values. Over a decade of experience delivering exceptional flooring and remodeling results."
 ) + header('about.html') + f'''
-<section class="hero hero-page" style="background-image:url('assets/img/hero-about.jpeg')">
+<section class="hero hero-page" style="background-image:url('assets/img/team.jpeg')">
   <div class="container">
     <div class="hero-inner">
       <span class="eyebrow">About Us</span>
@@ -471,7 +471,7 @@ pages['about.html'] = head(
       </ul>
       <a href="{TEL}" class="btn btn-primary">Call Us Now!</a>
     </div>
-    <div class="reveal reveal-d1"><div class="photo-frame"><img src="assets/img/team.jpeg" alt="RA Flooring team" loading="lazy"></div></div>
+    <div class="reveal reveal-d1"><div class="photo-frame"><img src="assets/img/team-photo.jpg" alt="RA Flooring team" loading="lazy"></div></div>
   </div>
 </section>
 ''' + contact_band() + footer()
