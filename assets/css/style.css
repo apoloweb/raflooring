@@ -157,6 +157,10 @@ section{padding:96px 0}
 .works-grid a:hover img{transform:scale(1.07)}
 .works-grid a:hover::after{opacity:1}
 @media(max-width:900px){.works-grid{grid-template-columns:repeat(2,1fr)}}
+.works-grid a.has-cap::after{opacity:1;background:linear-gradient(to top,rgba(18,20,26,.72),transparent 55%)}
+.works-grid .work-cap{position:absolute;left:18px;right:18px;bottom:14px;z-index:2;color:#fff;display:flex;flex-direction:column;line-height:1.3}
+.works-grid .work-cap strong{font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.works-grid .work-cap small{font-size:13.5px;font-weight:400;opacity:.9}
 .center-cta{text-align:center;margin-top:44px}
 
 /* ---------- reviews ---------- */
