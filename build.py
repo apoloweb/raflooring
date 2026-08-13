@@ -184,15 +184,41 @@ pages['index.html'] = head(
 ) + header('index.html') + f'''
 <section class="hero" style="background-image:url('assets/img/hero-home.webp')">
   <div class="container">
-    <div class="hero-inner">
-      <div class="stars">★★★★★</div>
-      <span class="eyebrow">RA Contractor Flooring</span>
-      <h1>#1 in Flooring and Remodeling Services for Beautiful, Lasting Results</h1>
-      <p>Explore our exceptional flooring services at RA Contractor Flooring Inc., the trusted choice for high-quality flooring solutions. Whether for your home or business, we deliver expert vinyl, carpet, and tile flooring installations with same-day service for your convenience.</p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
-        <a href="{TEL}" class="btn btn-ghost">Call: {PHONE}</a>
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <div class="stars">★★★★★</div>
+        <span class="eyebrow">RA Contractor Flooring</span>
+        <h1>#1 in Flooring and Remodeling Services for Beautiful, Lasting Results</h1>
+        <p>Explore our exceptional flooring services at RA Contractor Flooring Inc., the trusted choice for high-quality flooring solutions. Whether for your home or business, we deliver expert vinyl, carpet, and tile flooring installations with same-day service for your convenience.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="{TEL}" class="btn btn-ghost">Call: {PHONE}</a>
+        </div>
       </div>
+      <form class="hero-form" action="https://formsubmit.co/{EMAIL}" method="POST">
+        <h3>Fast Free Quote</h3>
+        <p class="hint">Tell us about your project — we reply the same day.</p>
+        <input type="hidden" name="_subject" value="New quick quote — raflooring website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="">
+        <div class="field"><input name="name" type="text" required placeholder="Your name *" aria-label="Name"></div>
+        <div class="field"><input name="phone" type="tel" required placeholder="Phone *" aria-label="Phone"></div>
+        <div class="field">
+          <select name="service" aria-label="Service">
+            <option value="" disabled selected>Which service?</option>
+            <option>Carpet Flooring</option>
+            <option>Vinyl / Luxury Vinyl Plank</option>
+            <option>Hardwood Flooring</option>
+            <option>Epoxy Flooring</option>
+            <option>Tile Flooring</option>
+            <option>Kitchen Remodeling</option>
+            <option>Bathroom Remodeling</option>
+            <option>Painting</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request My Quote</button>
+      </form>
     </div>
   </div>
 </section>

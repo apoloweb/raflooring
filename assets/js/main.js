@@ -111,11 +111,12 @@
     });
   });
 
-  // contact form: point the redirect at this site's thank-you page
-  var next = document.querySelector('input[name="_next"]');
-  if (next && !next.value) {
-    next.value = location.href.replace(/[^/]*$/, '') + 'thank-you.html';
-  }
+  // forms: point the redirect at this site's thank-you page
+  document.querySelectorAll('input[name="_next"]').forEach(function (next) {
+    if (!next.value) {
+      next.value = location.href.replace(/[^/]*$/, '') + 'thank-you.html';
+    }
+  });
 
   // footer year
   var yr = document.getElementById('year');
