@@ -46,7 +46,7 @@ def header(active=''):
   <div class="container nav-wrap">
     <a href="index.html" class="brand">
       <img src="assets/img/logo-white.png" alt="RA Flooring logo">
-      <span class="brand-text"><strong>RA Flooring</strong><small>Carpet · Vinyl · Hardwood · Tiling</small></span>
+      <span class="brand-text"><strong>RA Flooring</strong><small>Carpet · Vinyl · Hardwood · Tile</small></span>
     </a>
     <nav class="nav" id="mainNav">
       {navlink('index.html', 'Home', active)}
@@ -108,7 +108,7 @@ def footer():
       <div>
         <a href="index.html" class="brand">
           <img src="assets/img/logo-white.png" alt="RA Flooring logo">
-          <span class="brand-text"><strong>RA Flooring</strong><small>Carpet · Vinyl · Hardwood · Tiling</small></span>
+          <span class="brand-text"><strong>RA Flooring</strong><small>Carpet · Vinyl · Hardwood · Tile</small></span>
         </a>
         <p>RA Contractor Flooring Inc. — the trusted choice for high-quality flooring solutions in Central Florida. Expert vinyl, carpet, hardwood, epoxy and tile installations.</p>
         <div class="social-row">
@@ -179,7 +179,7 @@ pages = {}
 
 # ---------------------------------------------------------------- HOME
 pages['index.html'] = head(
-    "RA Flooring – Carpet, Vinyl, Hardwood & Tiling in Davenport, FL",
+    "RA Flooring – Carpet, Vinyl, Hardwood & Tile in Davenport, FL",
     "RA Contractor Flooring Inc. — #1 in flooring and remodeling services for beautiful, lasting results. Expert vinyl, carpet, hardwood, epoxy and tile installations in Central Florida."
 ) + header('index.html') + f'''
 <section class="hero" style="background-image:url('assets/img/hero-home.webp')">
