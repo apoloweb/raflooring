@@ -12,6 +12,19 @@ REVIEWS = "https://www.google.com/search?q=RA+Contractor+Flooring+Inc+reviews"
 IG = "https://www.instagram.com/racontractorfloor/"
 FB = "https://www.facebook.com/racontractorfloor/"
 
+# OpenAI Ads pixel (fonte de dados "RA Flooring Website" — ads.openai.com)
+OAI_PIXEL_ID = "AEzR1NKmggbzbYkmer3tov"
+OAI_PIXEL = f'''<script>
+  (function (w, d, s, u) {{
+    if (w.oaiq) return;
+    var q = function () {{ q.q.push(arguments); }};
+    q.q = []; w.oaiq = q;
+    var js = d.createElement(s); js.async = true; js.src = u;
+    var f = d.getElementsByTagName(s)[0]; f.parentNode.insertBefore(js, f);
+  }})(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+  oaiq("init", {{ pixelId: "{OAI_PIXEL_ID}" }});
+</script>'''
+
 CARET = '<svg width="11" height="7" viewBox="0 0 11 7" fill="none"><path d="M1 1l4.5 4.5L10 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
 IG_SVG = '<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.4.2-1.7.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.6-.3 1.7-.1 1.3-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.4.3 1.7.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.6.3 1.7.3 1.3.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.4-.2 1.7-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.6.3-1.7.1-1.3.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.4-.3-1.7-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.6-.3-1.7-.3-1.3-.1-1.6-.1-4.8-.1zm0 3.4a5.4 5.4 0 110 10.8 5.4 5.4 0 010-10.8zm0 2a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zm5.6-3.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>'
 FB_SVG = '<svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6H17V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H8.5v3h2.3V21h2.7z"/></svg>'
@@ -31,6 +44,7 @@ def head(title, desc):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+{OAI_PIXEL}
 </head>
 <body>
 '''
@@ -870,6 +884,10 @@ pages['thank-you.html'] = head(
     <a href="index.html" class="btn btn-primary">Back To Home</a>
   </div>
 </div>
+<script>
+  // conversão: os formulários redirecionam para esta página após o envio
+  oaiq("measure", "lead_created", {{ type: "customer_action" }});
+</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
