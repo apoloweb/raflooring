@@ -218,6 +218,7 @@ pages['index.html'] = head(
           <div class="field"><input name="phone" type="tel" required placeholder="Phone *" aria-label="Phone"></div>
         </div>
         <div class="field"><input name="email" type="email" required placeholder="Email *" aria-label="Email"></div>
+        <div class="field"><input name="address" type="text" placeholder="Project address (street, city, ZIP)" aria-label="Project address"></div>
         <div class="field">
           <select name="service" aria-label="Service">
             <option value="" disabled selected>Which service?</option>
