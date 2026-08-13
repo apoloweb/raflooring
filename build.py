@@ -160,6 +160,7 @@ def footer():
     <div class="footer-bottom">
       <span>© <span id="year"></span> RA Contractor Flooring Inc. All rights reserved.</span>
       <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-use.html">Terms of Use</a></span>
+      <span>Developed by <a href="https://apoloweb.net.br/" target="_blank" rel="noopener"><strong>Apolo Web</strong></a></span>
     </div>
   </div>
 </footer>
