@@ -455,7 +455,7 @@ svc2 = [
     ('reviews-home.jpg', 'Luxury Vinyl Plank', 'Upgrade your space with our luxury vinyl plank flooring, combining sleek design, durability, and water resistance for any room.', 'Request a Quote'),
     ('svc2-hardwood.jpg', 'Hardwood Flooring', 'Add timeless charm and unmatched durability to your home with our hardwood flooring services, tailored for perfection.', 'Get a Free Estimate'),
     ('svc-epoxy.png', 'Epoxy Flooring', 'Opt for our epoxy flooring services for a seamless, durable, and low-maintenance solution perfect for garages and industrial spaces.', 'Request a Quote'),
-    ('svc2-tiling.jpg', 'Tile', "Enhance your home's style and functionality with our expert tile services, offering precision and long-lasting quality.", 'Get a Free Estimate'),
+    ('svc2-tile.jpg', 'Tile', "Enhance your home's style and functionality with our expert tile services, offering precision and long-lasting quality.", 'Get a Free Estimate'),
     ('svc2-drywall.jpg', 'Drywall', 'Ensure flawless walls and ceilings with our drywall services, delivering smooth, durable finishes ready for painting or decor.', 'Request a Quote'),
     ('svc2-painting.png', 'Painting', 'Refresh your space with our professional painting services, offering vibrant colors and clean finishes for any interior or exterior.', 'Get a Free Estimate'),
 ]
