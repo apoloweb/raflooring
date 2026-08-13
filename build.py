@@ -485,7 +485,7 @@ svc2 = [
     ('svc2-hardwood.jpg', 'Hardwood Flooring', 'Add timeless charm and unmatched durability to your home with our hardwood flooring services, tailored for perfection.', 'Get a Free Estimate'),
     ('svc-refinishing.jpeg', 'Hardwood Refinishing', 'Restore the natural beauty of your hardwood floors with professional sanding, staining and a durable protective finish.', 'Request a Quote'),
     ('svc-epoxy.png', 'Epoxy Flooring', 'Opt for our epoxy flooring services for a seamless, durable, and low-maintenance solution perfect for garages and industrial spaces.', 'Request a Quote'),
-    ('svc2-tile.jpg', 'Tile', "Enhance your home's style and functionality with our expert tile services, offering precision and long-lasting quality.", 'Get a Free Estimate'),
+    ('svc-tile.jpg', 'Tile', "Enhance your home's style and functionality with our expert tile services, offering precision and long-lasting quality.", 'Get a Free Estimate'),
     ('svc2-drywall.jpg', 'Drywall', 'Ensure flawless walls and ceilings with our drywall services, delivering smooth, durable finishes ready for painting or decor.', 'Request a Quote'),
     ('svc2-painting.png', 'Painting', 'Refresh your space with our professional painting services, offering vibrant colors and clean finishes for any interior or exterior.', 'Get a Free Estimate'),
 ]
@@ -587,8 +587,9 @@ videos = [
 videos_html = '\n'.join(video_card(s, t, d) for s, t, d in videos)
 works_html = '\n'.join(
     f'<a href="assets/img/work-{n}.jpg" target="_blank" class="reveal"><img src="assets/img/work-{n}.jpg" alt="RA Flooring project" loading="lazy"></a>'
-    for n in range(1, 9)
-)
+    for n in range(1, 8)
+) + '''
+<a href="assets/img/work-barnes-noble.jpg" target="_blank" class="reveal has-cap"><img src="assets/img/work-barnes-noble.jpg" alt="Barnes &amp; Noble — tile, carpet and epoxy" loading="lazy"><span class="work-cap"><strong>Barnes &amp; Noble</strong><small>Tile, Carpet &amp; Epoxy Coat</small></span></a>'''
 
 pages['gallery.html'] = head(
     "Gallery – RA Flooring",
