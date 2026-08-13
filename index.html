@@ -40,13 +40,25 @@
 </header>
 
 <section class="hero" style="background-image:url('assets/img/hero-home.webp')">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="slide active" style="background-image:url('assets/img/hero-slide-1.webp')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-2.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-3.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-4.webp')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-5.jpeg')"></div>
+  </div>
   <div class="container">
     <div class="hero-grid">
       <div class="hero-inner">
         <div class="stars">★★★★★</div>
         <span class="eyebrow">RA Contractor Flooring</span>
         <h1>#1 in Flooring and Remodeling Services for Beautiful, Lasting Results</h1>
-        <p>Explore our exceptional flooring services at RA Contractor Flooring Inc., the trusted choice for high-quality flooring solutions. Whether for your home or business, we deliver expert vinyl, carpet, and tile flooring installations with same-day service for your convenience.</p>
+        <p>Explore our exceptional flooring services at RA Contractor Flooring Inc., the trusted choice for high-quality flooring solutions for your home or business.</p>
+        <ul class="hero-check">
+          <li><span class="tick">✓</span>Free in-home estimates</li>
+          <li><span class="tick">✓</span>Same-day installation for your convenience</li>
+          <li><span class="tick">✓</span>Satisfaction guaranteed</li>
+        </ul>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
           <a href="tel:+17542462843" class="btn btn-ghost">Call: (754) 246-2843</a>
@@ -58,14 +70,18 @@
         <input type="hidden" name="_subject" value="New quick quote — raflooring website">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="">
-        <div class="field"><input name="name" type="text" required placeholder="Your name *" aria-label="Name"></div>
-        <div class="field"><input name="phone" type="tel" required placeholder="Phone *" aria-label="Phone"></div>
+        <div class="form-row">
+          <div class="field"><input name="name" type="text" required placeholder="Your name *" aria-label="Name"></div>
+          <div class="field"><input name="phone" type="tel" required placeholder="Phone *" aria-label="Phone"></div>
+        </div>
+        <div class="field"><input name="email" type="email" required placeholder="Email *" aria-label="Email"></div>
         <div class="field">
           <select name="service" aria-label="Service">
             <option value="" disabled selected>Which service?</option>
             <option>Carpet Flooring</option>
             <option>Vinyl / Luxury Vinyl Plank</option>
             <option>Hardwood Flooring</option>
+            <option>Hardwood Refinishing</option>
             <option>Epoxy Flooring</option>
             <option>Tile Flooring</option>
             <option>Kitchen Remodeling</option>
@@ -73,6 +89,17 @@
             <option>Painting</option>
             <option>Other</option>
           </select>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="hf-date">Preferred date</label><input id="hf-date" name="preferred_date" type="date" aria-label="Preferred date"></div>
+          <div class="field"><label for="hf-time">Preferred time</label>
+            <select id="hf-time" name="preferred_time" aria-label="Preferred time">
+              <option value="" disabled selected>Any time</option>
+              <option>Morning (8am – 12pm)</option>
+              <option>Afternoon (12pm – 4pm)</option>
+              <option>Evening (4pm – 7pm)</option>
+            </select>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request My Quote</button>
       </form>
@@ -204,6 +231,10 @@
       <article class="svc-card reveal">
   <div class="thumb"><img src="assets/img/svc-tile.jpg" alt="Tile Flooring" loading="lazy"></div>
   <div class="body"><h3>Tile Flooring</h3><p>Tile flooring offers durability, style, and easy upkeep. Perfect for any space, it enhances your home's look with long-lasting performance and versatile design options.</p><a class="link" href="services.html">Learn more →</a></div>
+</article>
+      <article class="svc-card reveal">
+  <div class="thumb"><img src="assets/img/svc-refinishing.jpeg" alt="Hardwood Refinishing" loading="lazy"></div>
+  <div class="body"><h3>Hardwood Refinishing</h3><p>Restore the natural beauty of your hardwood floors. We sand away scratches and old finishes, then apply stain and a protective finish to bring your floors back to life.</p><a class="link" href="services.html">Learn more →</a></div>
 </article>
     </div>
   </div>

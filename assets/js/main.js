@@ -118,6 +118,17 @@
     }
   });
 
+  // hero background slideshow
+  var slides = document.querySelectorAll('.hero-slides .slide');
+  if (slides.length > 1) {
+    var current = 0;
+    setInterval(function () {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+  }
+
   // footer year
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();

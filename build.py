@@ -183,13 +183,25 @@ pages['index.html'] = head(
     "RA Contractor Flooring Inc. — #1 in flooring and remodeling services for beautiful, lasting results. Expert vinyl, carpet, hardwood, epoxy and tile installations in Central Florida."
 ) + header('index.html') + f'''
 <section class="hero" style="background-image:url('assets/img/hero-home.webp')">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="slide active" style="background-image:url('assets/img/hero-slide-1.webp')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-2.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-3.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-4.webp')"></div>
+    <div class="slide" style="background-image:url('assets/img/hero-slide-5.jpeg')"></div>
+  </div>
   <div class="container">
     <div class="hero-grid">
       <div class="hero-inner">
         <div class="stars">★★★★★</div>
         <span class="eyebrow">RA Contractor Flooring</span>
         <h1>#1 in Flooring and Remodeling Services for Beautiful, Lasting Results</h1>
-        <p>Explore our exceptional flooring services at RA Contractor Flooring Inc., the trusted choice for high-quality flooring solutions. Whether for your home or business, we deliver expert vinyl, carpet, and tile flooring installations with same-day service for your convenience.</p>
+        <p>Explore our exceptional flooring services at RA Contractor Flooring Inc., the trusted choice for high-quality flooring solutions for your home or business.</p>
+        <ul class="hero-check">
+          <li><span class="tick">✓</span>Free in-home estimates</li>
+          <li><span class="tick">✓</span>Same-day installation for your convenience</li>
+          <li><span class="tick">✓</span>Satisfaction guaranteed</li>
+        </ul>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
           <a href="{TEL}" class="btn btn-ghost">Call: {PHONE}</a>
@@ -201,14 +213,18 @@ pages['index.html'] = head(
         <input type="hidden" name="_subject" value="New quick quote — raflooring website">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="">
-        <div class="field"><input name="name" type="text" required placeholder="Your name *" aria-label="Name"></div>
-        <div class="field"><input name="phone" type="tel" required placeholder="Phone *" aria-label="Phone"></div>
+        <div class="form-row">
+          <div class="field"><input name="name" type="text" required placeholder="Your name *" aria-label="Name"></div>
+          <div class="field"><input name="phone" type="tel" required placeholder="Phone *" aria-label="Phone"></div>
+        </div>
+        <div class="field"><input name="email" type="email" required placeholder="Email *" aria-label="Email"></div>
         <div class="field">
           <select name="service" aria-label="Service">
             <option value="" disabled selected>Which service?</option>
             <option>Carpet Flooring</option>
             <option>Vinyl / Luxury Vinyl Plank</option>
             <option>Hardwood Flooring</option>
+            <option>Hardwood Refinishing</option>
             <option>Epoxy Flooring</option>
             <option>Tile Flooring</option>
             <option>Kitchen Remodeling</option>
@@ -216,6 +232,17 @@ pages['index.html'] = head(
             <option>Painting</option>
             <option>Other</option>
           </select>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="hf-date">Preferred date</label><input id="hf-date" name="preferred_date" type="date" aria-label="Preferred date"></div>
+          <div class="field"><label for="hf-time">Preferred time</label>
+            <select id="hf-time" name="preferred_time" aria-label="Preferred time">
+              <option value="" disabled selected>Any time</option>
+              <option>Morning (8am – 12pm)</option>
+              <option>Afternoon (12pm – 4pm)</option>
+              <option>Evening (4pm – 7pm)</option>
+            </select>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request My Quote</button>
       </form>
@@ -333,6 +360,7 @@ pages['index.html'] = head(
       {svc_card('svc-hardwood.jpg', 'Hardwood Flooring', 'Enhance your space with our hardwood flooring services, offering timeless style and exceptional durability for a perfect finish.', link='services.html')}
       {svc_card('svc-epoxy.png', 'Epoxy Flooring', "Transform your space with epoxy flooring. Our expert installation services will enhance any room's elegance, adding a sleek and modern touch to your home.", link='services.html')}
       {svc_card('svc-tile.jpg', 'Tile Flooring', "Tile flooring offers durability, style, and easy upkeep. Perfect for any space, it enhances your home's look with long-lasting performance and versatile design options.", link='services.html')}
+      {svc_card('svc-refinishing.jpeg', 'Hardwood Refinishing', 'Restore the natural beauty of your hardwood floors. We sand away scratches and old finishes, then apply stain and a protective finish to bring your floors back to life.', link='services.html')}
     </div>
   </div>
 </section>
@@ -454,6 +482,7 @@ svc2 = [
     ('svc2-carpet-tile.jpg', 'Carpet Tile', 'Elevate your floors with our carpet tile services, offering flexible, easy-to-maintain options for a modern and functional finish.', 'Get a Free Estimate'),
     ('reviews-home.jpg', 'Luxury Vinyl Plank', 'Upgrade your space with our luxury vinyl plank flooring, combining sleek design, durability, and water resistance for any room.', 'Request a Quote'),
     ('svc2-hardwood.jpg', 'Hardwood Flooring', 'Add timeless charm and unmatched durability to your home with our hardwood flooring services, tailored for perfection.', 'Get a Free Estimate'),
+    ('svc-refinishing.jpeg', 'Hardwood Refinishing', 'Restore the natural beauty of your hardwood floors with professional sanding, staining and a durable protective finish.', 'Request a Quote'),
     ('svc-epoxy.png', 'Epoxy Flooring', 'Opt for our epoxy flooring services for a seamless, durable, and low-maintenance solution perfect for garages and industrial spaces.', 'Request a Quote'),
     ('svc2-tile.jpg', 'Tile', "Enhance your home's style and functionality with our expert tile services, offering precision and long-lasting quality.", 'Get a Free Estimate'),
     ('svc2-drywall.jpg', 'Drywall', 'Ensure flawless walls and ceilings with our drywall services, delivering smooth, durable finishes ready for painting or decor.', 'Request a Quote'),
@@ -489,6 +518,28 @@ pages['services.html'] = head(
 </section>
 
 <section class="band-light">
+  <div class="container split">
+    <div class="reveal reveal-d1"><div class="photo-frame"><img src="assets/img/svc-refinishing.jpeg" alt="Hardwood floor refinishing in progress" loading="lazy"></div></div>
+    <div class="reveal">
+      <span class="eyebrow">Featured Service</span>
+      <h2>Hardwood Refinishing</h2>
+      <p style="margin:16px 0">Restore the natural beauty of your hardwood floors with our professional refinishing services. We sand away scratches, wear, old finishes, and surface imperfections, then apply a high-quality stain and protective finish to bring your floors back to life.</p>
+      <p style="margin-bottom:18px">Whether you want to refresh the original look or change the color of your hardwood, our team delivers a smooth, durable, and beautiful finish that can completely transform your space.</p>
+      <h3 style="font-size:19px;margin-bottom:8px">Our Hardwood Refinishing Services Include:</h3>
+      <ul class="check-list" style="margin-bottom:20px">
+        <li><span class="tick">✓</span>Professional sanding</li>
+        <li><span class="tick">✓</span>Scratch and surface damage removal</li>
+        <li><span class="tick">✓</span>Staining and color change</li>
+        <li><span class="tick">✓</span>Protective finish application</li>
+        <li><span class="tick">✓</span>Residential and commercial refinishing</li>
+      </ul>
+      <p style="color:var(--text-soft);margin-bottom:24px">Give your hardwood floors a fresh new look without the cost of replacing them.</p>
+      <a href="contact.html" class="btn btn-primary">Get a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<section>
   <div class="container split">
     <div class="reveal">
       <h2>Request Your Free Estimate</h2>
@@ -644,6 +695,7 @@ pages['contact.html'] = head(
                 <option>Carpet Flooring</option>
                 <option>Vinyl / Luxury Vinyl Plank</option>
                 <option>Hardwood Flooring</option>
+                <option>Hardwood Refinishing</option>
                 <option>Epoxy Flooring</option>
                 <option>Tile Flooring</option>
                 <option>Kitchen Remodeling</option>
