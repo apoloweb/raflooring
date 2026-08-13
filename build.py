@@ -5,9 +5,9 @@ Run:  python build.py   (writes the .html files next to this script)
 import io, os
 
 OUT = os.path.dirname(os.path.abspath(__file__))
-PHONE = "(689) 267 1000"
-TEL = "tel:+16892671000"
-EMAIL = "stellarremodelinginc@gmail.com"
+PHONE = "(754) 246-2843"
+TEL = "tel:+17542462843"
+EMAIL = "roque@raflooringusa.com"
 REVIEWS = "https://www.google.com/search?q=RA+Contractor+Flooring+Inc+reviews"
 IG = "https://www.instagram.com/racontractorfloor/"
 FB = "https://www.facebook.com/racontractorfloor/"
@@ -571,7 +571,7 @@ pages['gallery.html'] = head(
 # ---------------------------------------------------------------- CONTACT
 pages['contact.html'] = head(
     "Contact – RA Flooring",
-    "Get in touch with RA Flooring for a free quote. Call (689) 267 1000 — Davenport, FL. Fully insured, licensed and Google Guaranteed."
+    "Get in touch with RA Flooring for a free quote. Call (754) 246-2843 — Davenport, FL. Fully insured, licensed and Google Guaranteed."
 ) + header('contact.html') + f'''
 <section class="hero hero-page" style="background-image:url('assets/img/hero-contact.jpg')">
   <div class="container">
