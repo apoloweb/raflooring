@@ -37,6 +37,7 @@ def head(title, desc):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
